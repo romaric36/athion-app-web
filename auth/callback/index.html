@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATHion — Connexion</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%237C3AED'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='18' font-weight='900' font-family='Inter,sans-serif'>A</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      background: #08080E;
+      color: #FAFAFA;
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      display: flex; align-items: center; justify-content: center;
+      min-height: 100svh; overflow: hidden;
+    }
+    .orb { position: fixed; border-radius: 50%; filter: blur(100px); pointer-events: none; }
+    .orb-1 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(124,58,237,.28), transparent 70%);
+      top: -150px; left: -100px;
+    }
+    .orb-2 {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(91,33,182,.20), transparent 70%);
+      bottom: -100px; right: -80px;
+    }
+    body::after {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: .025; pointer-events: none; z-index: 9999;
+    }
+    .card {
+      position: relative; z-index: 1;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 28px; padding: 52px 48px;
+      text-align: center; max-width: 420px; width: 90%;
+      backdrop-filter: blur(20px);
+    }
+    .logo {
+      width: 64px; height: 64px;
+      background: linear-gradient(135deg, #7C3AED, #5B21B6);
+      border-radius: 18px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px; font-weight: 900; color: #fff;
+      margin: 0 auto 28px;
+      box-shadow: 0 0 40px rgba(124,58,237,.5);
+      animation: pulse 3s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%,100%{ box-shadow: 0 0 40px rgba(124,58,237,.5); }
+      50%     { box-shadow: 0 0 64px rgba(124,58,237,.75); }
+    }
+    .spinner-wrap { display: flex; justify-content: center; margin-bottom: 28px; }
+    .spinner {
+      width: 48px; height: 48px;
+      border: 2.5px solid rgba(124,58,237,.15);
+      border-top-color: #7C3AED;
+      border-radius: 50%;
+      animation: spin .9s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    h1 { font-size: 22px; font-weight: 800; letter-spacing: -.5px; margin-bottom: 10px; }
+    .sub { font-size: 15px; color: #9CA3AF; line-height: 1.6; margin-bottom: 32px; }
+    .open-btn {
+      display: none;
+      align-items: center; justify-content: center; gap: 10px;
+      background: linear-gradient(135deg, #7C3AED, #5B21B6);
+      color: #fff; font-size: 15px; font-weight: 700;
+      padding: 14px 32px; border-radius: 14px;
+      cursor: pointer; border: none; width: 100%;
+      box-shadow: 0 8px 36px rgba(124,58,237,.42);
+      transition: transform .2s, box-shadow .2s;
+      text-decoration: none;
+    }
+    .open-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 52px rgba(124,58,237,.58); }
+    .fallback { margin-top: 16px; font-size: 13px; color: #4B5563; display: none; }
+    .fallback a { color: #A78BFA; text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="card" id="card">
+    <div class="logo">A</div>
+    <div class="spinner-wrap"><div class="spinner"></div></div>
+    <h1 id="title">Connexion en cours…</h1>
+    <p class="sub" id="subtitle">On finalise ta connexion ATHion, une petite seconde.</p>
+    <a class="open-btn" id="openBtn" href="#">Ouvrir ATHion →</a>
+    <p class="fallback" id="fallback">L'app ne s'est pas ouverte ? <a href="https://athion.app">Télécharge ATHion</a></p>
+  </div>
+  <script>
+    (function () {
+      // Reconstruit le deep link en transférant tous les params (code, token_hash, etc.)
+      // et le fragment (#access_token=...&refresh_token=...) pour le flow implicite
+      var qs       = window.location.search;   // ?code=xxx  ou  ?token_hash=xxx&type=xxx
+      var hash     = window.location.hash;     // #access_token=xxx&refresh_token=xxx
+      var deepLink = 'athion://auth/callback' + qs + hash;
+
+      var openBtn  = document.getElementById('openBtn');
+      var fallback = document.getElementById('fallback');
+      var title    = document.getElementById('title');
+      var subtitle = document.getElementById('subtitle');
+      var spinner  = document.querySelector('.spinner-wrap');
+
+      // Tente la redirection immédiatement
+      window.location.href = deepLink;
+
+      // Après 1.5s : affiche le bouton manuel
+      setTimeout(function () {
+        spinner.style.display = 'none';
+        title.textContent    = 'Ouvre ATHion';
+        subtitle.textContent = 'Appuie ci-dessous si l\'application ne s\'est pas ouverte automatiquement.';
+        openBtn.href         = deepLink;
+        openBtn.style.display = 'flex';
+      }, 1500);
+
+      // Après 4s : affiche le lien de téléchargement
+      setTimeout(function () {
+        fallback.style.display = 'block';
+      }, 4000);
+    })();
+  </script>
+</body>
+</html>
