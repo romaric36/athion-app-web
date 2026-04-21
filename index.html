@@ -452,34 +452,115 @@
           </div>
         </div>
 
-        <div class="hero-visual">
-          <div class="phone-glow"></div>
-          <div class="phone">
-            <div class="phone-notch"><div class="phone-island"></div></div>
-            <div class="phone-body">
-              <div class="phone-topbar">
-                <div><div class="phone-hello">Développé couché</div><div class="phone-brand">Série 3 / 4</div></div>
-                <div class="phone-timer">1:45</div>
+        <!-- Hero animated phone carousel -->
+        <div class="hero-visual" style="flex-direction:column;gap:16px">
+          <div class="sc-phone-glow"></div>
+          <div class="sc-phone" id="sc-phone">
+            <div class="sc-island"></div>
+            <div class="sc-btn-r"></div>
+            <div class="sc-btn-l1"></div>
+            <div class="sc-btn-l2"></div>
+            <div class="sc-track" id="sc-track">
+
+              <!-- Screen 1: Programme -->
+              <div class="sc-screen">
+                <div class="sc-body">
+                  <div class="s1-hint">Une rep ou un kilo en plus aujourd'hui ?</div>
+                  <div class="s1-titlerow"><div class="s1-title">RMK</div><div class="s1-circle"></div></div>
+                  <div class="s1-vol">
+                    <div class="s1-donut">
+                      <svg width="52" height="52" viewBox="0 0 52 52"><circle cx="26" cy="26" r="20" fill="none" stroke="#EDE9FE" stroke-width="5"/><circle cx="26" cy="26" r="20" fill="none" stroke="#7C3AED" stroke-width="5" stroke-dasharray="0 126" stroke-linecap="round" transform="rotate(-90 26 26)"/></svg>
+                      <div class="s1-donut-lbl">0/3<br>séances</div>
+                    </div>
+                    <div class="s1-vol-inf">
+                      <div class="s1-vol-lbl">Volume semaine</div>
+                      <div class="s1-vol-val">0 kg</div>
+                      <div class="s1-badge-r">↘ -1 séances</div>
+                      <div class="s1-encore">Encore 3 séances</div>
+                    </div>
+                  </div>
+                  <div class="s1-search"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Rechercher programme...</div>
+                  <div class="s1-chips"><span class="s1-chip ca">Tous</span><span class="s1-chip">Favoris</span><span class="s1-chip">Mes programmes</span></div>
+                  <div class="s1-chips"><span class="s1-chip co">Tous les groupes</span><span class="s1-chip">Épaules</span><span class="s1-chip">Biceps</span></div>
+                  <div class="s1-prog">
+                    <div class="s1-prog-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+                    <div class="s1-prog-info"><div class="s1-prog-name">Full Body Strength</div><div class="s1-prog-meta">45 min · 3 exercices</div></div>
+                    <div class="s1-prog-btn">Lancer ▶</div>
+                  </div>
+                  <div class="s1-create">+ Créer un programme</div>
+                  <div class="s1-ai-hdr"><span style="display:flex;align-items:center;gap:4px"><svg width="11" height="11" viewBox="0 0 24 24" fill="#7C3AED"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Programmes IA</span><span class="s1-ai-badge">0/1 utilisé</span></div>
+                  <div class="s1-ai-card"><div class="s1-ai-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="#7C3AED"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><div class="s1-ai-title">Générer mon programme IA</div><div class="s1-ai-desc">1 génération gratuite disponible.</div></div></div>
+                </div>
+                <div class="sc-tabbar">
+                  <div class="sc-tab t-on"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Pro...</div>
+                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Séa...</div>
+                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Stats</div>
+                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>Social</div>
+                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/></svg>Régl...</div>
+                </div>
               </div>
-              <div class="phone-card">
-                <div class="phone-card-day">Dernière fois · Lundi</div>
-                <div class="phone-card-perf">80 kg × 8 — 80 kg × 7 — 77.5 kg × 8</div>
+
+              <!-- Screen 2: Stats -->
+              <div class="sc-screen">
+                <div class="sc-body">
+                  <div class="s2-hdr"><div><div class="s2-title">Ta progression</div><div class="s2-sub">Séances · Volume · Records</div></div><div class="s2-bell"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div></div>
+                  <div class="s2-filter"><span class="s2-fc fa">7j</span><span class="s2-fc">30j</span><span class="s2-fc">3m</span><span class="s2-fc">1an</span></div>
+                  <div class="s2-week"><div><div class="s2-wk-lbl">Ta semaine</div><div class="s2-wk-date">20 avr. – 26 avr.</div><div class="s2-wk-msg">Semaine difficile ? La prochaine sera meilleure</div></div><div class="s2-wk-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="#F59E0B"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div></div>
+                  <div class="s2-stats-row">
+                    <div class="s2-sc"><div class="s2-sc-icon" style="background:#EDE9FE"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"><path d="M6.5 6.5h11M6.5 17.5h11M4 12h16"/></svg></div><div class="s2-sc-val">0/3</div><div class="s2-sc-lbl">Séances</div></div>
+                    <div class="s2-sc"><div class="s2-sc-icon" style="background:#FEF3C7"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></div><div class="s2-sc-val">0 kg</div><div class="s2-sc-lbl">Volume</div></div>
+                    <div class="s2-sc"><div class="s2-sc-icon" style="background:#FEF3C7"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div><div class="s2-sc-val">—</div><div class="s2-sc-lbl">PR</div></div>
+                  </div>
+                  <div class="s2-grid">
+                    <div class="s2-card"><div class="s2-card-icon" style="background:#EDE9FE"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"><path d="M6.5 6.5h11M6.5 17.5h11M4 12h16"/></svg></div><div class="s2-card-val">0</div><div class="s2-card-lbl">Séances</div><div class="s2-badge">↘ -1</div></div>
+                    <div class="s2-card"><div class="s2-card-icon" style="background:#FEF3C7"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></div><div class="s2-card-val">0 kg</div><div class="s2-card-lbl">Volume</div><div class="s2-badge">↘ -6960 kg</div></div>
+                    <div class="s2-card"><div class="s2-card-icon" style="background:#FEF3C7"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div><div class="s2-card-val">—</div><div class="s2-card-lbl">Meilleur PR</div></div>
+                    <div class="s2-card"><div class="s2-card-icon" style="background:#DCFCE7"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="s2-card-val">—</div><div class="s2-card-lbl">Durée moy.</div><div class="s2-badge">↘ -1min</div></div>
+                  </div>
+                </div>
+                <div class="sc-tabbar">
+                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Pro...</div>
+                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Séa...</div>
+                  <div class="sc-tab t-on"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Stats</div>
+                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>Social</div>
+                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/></svg>Régl...</div>
+                </div>
               </div>
-              <div class="phone-rows">
-                <div class="phone-row" style="opacity:.5"><span class="phone-exname">Série 1</span><span class="phone-exval" style="color:#10B981">80 kg × 9 ✓</span></div>
-                <div class="phone-row" style="opacity:.5"><span class="phone-exname">Série 2</span><span class="phone-exval" style="color:#10B981">80 kg × 8 ✓</span></div>
-                <div class="phone-row" style="background:rgba(124,58,237,.10);border:1px solid rgba(124,58,237,.15)"><span class="phone-exname" style="font-weight:700">Série 3</span><span class="phone-exval" style="font-weight:700">82.5 kg × 8</span></div>
+
+              <!-- Screen 3: Communauté -->
+              <div class="sc-screen">
+                <div class="sc-body">
+                  <div class="s3-hdr"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><div class="s3-hdr-title">Communauté</div></div>
+                  <div class="s3-hero"><div class="s3-hero-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="s3-hero-title">Communauté ATHion</div><div class="s3-hero-desc">Rejoins tes amis, compare vos progressions et reste motivé ensemble.</div></div>
+                  <div class="s3-lbl">Classement cette semaine</div>
+                  <div class="s3-board">
+                    <div class="s3-row"><div class="s3-medal">🥇</div><div class="s3-av">A</div><div class="s3-name">Alex M.</div><div class="s3-val">4.8 t</div></div>
+                    <div class="s3-row"><div class="s3-medal">🥈</div><div class="s3-av">T</div><div class="s3-name you">Toi</div><div class="s3-val">3.6 t</div></div>
+                    <div class="s3-row"><div class="s3-medal">🥉</div><div class="s3-av">J</div><div class="s3-name">Julien R.</div><div class="s3-val">2.9 t</div></div>
+                  </div>
+                  <div class="s3-lbl">Activité récente</div>
+                  <div class="s3-feed">
+                    <div class="s3-feed-row"><div class="s3-feed-emoji">🏆</div><div class="s3-feed-txt">Alex M. a battu son record sur Développé couché !</div><div class="s3-feed-time">2 h</div></div>
+                    <div class="s3-feed-row"><div class="s3-feed-emoji">💪</div><div class="s3-feed-txt">Julien R. — "Push Day" 3 200 kg</div><div class="s3-feed-time">5 h</div></div>
+                    <div class="s3-feed-row"><div class="s3-feed-emoji">🔥</div><div class="s3-feed-txt">Marie T. — 8 semaines de suite !</div><div class="s3-feed-time">1 j</div></div>
+                  </div>
+                </div>
+                <div class="sc-tabbar">
+                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Pro...</div>
+                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Séa...</div>
+                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Stats</div>
+                  <div class="sc-tab t-on"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>Social</div>
+                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/></svg>Régl...</div>
+                </div>
               </div>
-              <div class="phone-bar-wrap"><div class="phone-bar-fill"></div></div>
+
             </div>
           </div>
-          <div class="float-badge fb-session">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            Séance en cours
-          </div>
-          <div class="float-badge fb-record">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
-            Record battu !
+          <!-- Navigation dots -->
+          <div class="sc-dots">
+            <div class="sc-dot active" data-idx="0"></div>
+            <div class="sc-dot" data-idx="1"></div>
+            <div class="sc-dot" data-idx="2"></div>
           </div>
         </div>
       </div>
@@ -529,184 +610,30 @@
     <div class="container">
       <div class="sec-tag">Fonctionnalités</div>
       <h2 class="sec-title r">L'app qui progresse<br><span class="g">avec toi.</span></h2>
-      <div class="showcase-inner">
+      <div class="features-grid">
 
-        <!-- Left: feature tabs -->
-        <div class="showcase-feats r">
-          <div class="sf active" data-screen="0">
-            <div class="sf-bar" id="sfbar0"></div>
-            <div class="sf-num">01</div>
-            <div class="sf-name">Tes programmes, tes règles</div>
-            <div class="sf-txt">Crée un programme en 2 minutes ou laisse l'IA en générer un sur-mesure. Groupes musculaires, fréquence, niveau — tout est personnalisable.</div>
+        <div class="feat r">
+          <div class="feat-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </div>
-          <div class="sf" data-screen="1">
-            <div class="sf-bar" id="sfbar1"></div>
-            <div class="sf-num">02</div>
-            <div class="sf-name">Tes stats, en un coup d'œil</div>
-            <div class="sf-txt">Volume total, séances, records personnels. Tout est mesuré, tracé, affiché. Tu vois exactement où tu en es — semaine après semaine.</div>
-          </div>
-          <div class="sf" data-screen="2">
-            <div class="sf-bar" id="sfbar2"></div>
-            <div class="sf-num">03</div>
-            <div class="sf-name">Challenge tes amis</div>
-            <div class="sf-txt">Rejoins la communauté ATHion, compare ton volume avec tes amis et reste en tête du classement. La salle, c'est mieux à plusieurs.</div>
-          </div>
+          <div class="feat-title">Tes programmes, tes règles</div>
+          <p class="feat-desc">Crée un programme en 2 minutes ou laisse l'IA en générer un sur-mesure. Groupes musculaires, fréquence, niveau — tout est personnalisable.</p>
         </div>
 
-        <!-- Right: Phone -->
-        <div class="sc-phone-wrap r d1">
-          <div class="sc-phone-glow"></div>
-          <div class="sc-phone" id="sc-phone">
-            <div class="sc-island"></div>
-            <div class="sc-btn-r"></div>
-            <div class="sc-btn-l1"></div>
-            <div class="sc-btn-l2"></div>
-            <div class="sc-track" id="sc-track">
-
-              <!-- ── Screen 1: Programme ── -->
-              <div class="sc-screen">
-                <div class="sc-body">
-                  <div class="s1-hint">Une rep ou un kilo en plus aujourd'hui ?</div>
-                  <div class="s1-titlerow">
-                    <div class="s1-title">RMK</div>
-                    <div class="s1-circle"></div>
-                  </div>
-                  <div class="s1-vol">
-                    <div class="s1-donut">
-                      <svg width="52" height="52" viewBox="0 0 52 52"><circle cx="26" cy="26" r="20" fill="none" stroke="#EDE9FE" stroke-width="5"/><circle cx="26" cy="26" r="20" fill="none" stroke="#7C3AED" stroke-width="5" stroke-dasharray="0 126" stroke-linecap="round" transform="rotate(-90 26 26)"/></svg>
-                      <div class="s1-donut-lbl">0/3<br>séances</div>
-                    </div>
-                    <div class="s1-vol-inf">
-                      <div class="s1-vol-lbl">Volume semaine</div>
-                      <div class="s1-vol-val">0 kg</div>
-                      <div class="s1-badge-r">↘ -1 séances</div>
-                      <div class="s1-encore">Encore 3 séances</div>
-                    </div>
-                  </div>
-                  <div class="s1-search">
-                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-                    Rechercher programme...
-                  </div>
-                  <div class="s1-chips">
-                    <span class="s1-chip ca">Tous</span><span class="s1-chip">Favoris</span><span class="s1-chip">Mes programmes</span>
-                  </div>
-                  <div class="s1-chips">
-                    <span class="s1-chip co">Tous les groupes</span><span class="s1-chip">Épaules</span><span class="s1-chip">Biceps</span>
-                  </div>
-                  <div class="s1-prog">
-                    <div class="s1-prog-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-                    <div class="s1-prog-info">
-                      <div class="s1-prog-name">Full Body Strength</div>
-                      <div class="s1-prog-meta">45 min · 3 exercices</div>
-                    </div>
-                    <div class="s1-prog-btn">Lancer ▶</div>
-                  </div>
-                  <div class="s1-create">+ Créer un programme</div>
-                  <div class="s1-ai-hdr">
-                    <span style="display:flex;align-items:center;gap:4px"><svg width="11" height="11" viewBox="0 0 24 24" fill="#7C3AED"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Programmes IA</span>
-                    <span class="s1-ai-badge">0/1 utilisé</span>
-                  </div>
-                  <div class="s1-ai-card">
-                    <div class="s1-ai-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="#7C3AED"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-                    <div>
-                      <div class="s1-ai-title">Générer mon programme IA</div>
-                      <div class="s1-ai-desc">1 génération gratuite disponible.</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="sc-tabbar">
-                  <div class="sc-tab t-on"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Pro...</div>
-                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Séa...</div>
-                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Stats</div>
-                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>Social</div>
-                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 0 0 2 12"/></svg>Régl...</div>
-                </div>
-              </div>
-
-              <!-- ── Screen 2: Stats ── -->
-              <div class="sc-screen">
-                <div class="sc-body">
-                  <div class="s2-hdr">
-                    <div>
-                      <div class="s2-title">Ta progression</div>
-                      <div class="s2-sub">Séances · Volume · Records</div>
-                    </div>
-                    <div class="s2-bell"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
-                  </div>
-                  <div class="s2-filter">
-                    <span class="s2-fc fa">7j</span><span class="s2-fc">30j</span><span class="s2-fc">3m</span><span class="s2-fc">1an</span>
-                  </div>
-                  <div class="s2-week">
-                    <div>
-                      <div class="s2-wk-lbl">Ta semaine</div>
-                      <div class="s2-wk-date">20 avr. – 26 avr.</div>
-                      <div class="s2-wk-msg">Semaine difficile ? La prochaine sera meilleure</div>
-                    </div>
-                    <div class="s2-wk-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="#F59E0B"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
-                  </div>
-                  <div class="s2-stats-row">
-                    <div class="s2-sc"><div class="s2-sc-icon" style="background:#EDE9FE"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"><path d="M6.5 6.5h11M6.5 17.5h11M4 12h16"/></svg></div><div class="s2-sc-val">0/3</div><div class="s2-sc-lbl">Séances</div></div>
-                    <div class="s2-sc"><div class="s2-sc-icon" style="background:#FEF3C7"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></div><div class="s2-sc-val">0 kg</div><div class="s2-sc-lbl">Volume</div></div>
-                    <div class="s2-sc"><div class="s2-sc-icon" style="background:#FEF3C7"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div><div class="s2-sc-val">—</div><div class="s2-sc-lbl">PR</div></div>
-                  </div>
-                  <div class="s2-grid">
-                    <div class="s2-card"><div class="s2-card-icon" style="background:#EDE9FE"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"><path d="M6.5 6.5h11M6.5 17.5h11M4 12h16"/></svg></div><div class="s2-card-val">0</div><div class="s2-card-lbl">Séances</div><div class="s2-badge">↘ -1</div></div>
-                    <div class="s2-card"><div class="s2-card-icon" style="background:#FEF3C7"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></div><div class="s2-card-val">0 kg</div><div class="s2-card-lbl">Volume</div><div class="s2-badge">↘ -6960 kg</div></div>
-                    <div class="s2-card"><div class="s2-card-icon" style="background:#FEF3C7"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div><div class="s2-card-val">—</div><div class="s2-card-lbl">Meilleur PR</div></div>
-                    <div class="s2-card"><div class="s2-card-icon" style="background:#DCFCE7"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="s2-card-val">—</div><div class="s2-card-lbl">Durée moy.</div><div class="s2-badge">↘ -1min</div></div>
-                  </div>
-                </div>
-                <div class="sc-tabbar">
-                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Pro...</div>
-                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Séa...</div>
-                  <div class="sc-tab t-on"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Stats</div>
-                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>Social</div>
-                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/></svg>Régl...</div>
-                </div>
-              </div>
-
-              <!-- ── Screen 3: Communauté ── -->
-              <div class="sc-screen">
-                <div class="sc-body">
-                  <div class="s3-hdr">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    <div class="s3-hdr-title">Communauté</div>
-                  </div>
-                  <div class="s3-hero">
-                    <div class="s3-hero-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-                    <div class="s3-hero-title">Communauté ATHion</div>
-                    <div class="s3-hero-desc">Rejoins tes amis, compare vos progressions et reste motivé ensemble.</div>
-                  </div>
-                  <div class="s3-lbl">Classement cette semaine</div>
-                  <div class="s3-board">
-                    <div class="s3-row"><div class="s3-medal">🥇</div><div class="s3-av">A</div><div class="s3-name">Alex M.</div><div class="s3-val">4.8 t</div></div>
-                    <div class="s3-row"><div class="s3-medal">🥈</div><div class="s3-av">T</div><div class="s3-name you">Toi</div><div class="s3-val">3.6 t</div></div>
-                    <div class="s3-row"><div class="s3-medal">🥉</div><div class="s3-av">J</div><div class="s3-name">Julien R.</div><div class="s3-val">2.9 t</div></div>
-                  </div>
-                  <div class="s3-lbl">Activité récente</div>
-                  <div class="s3-feed">
-                    <div class="s3-feed-row"><div class="s3-feed-emoji">🏆</div><div class="s3-feed-txt">Alex M. a battu son record sur Développé couché !</div><div class="s3-feed-time">2 h</div></div>
-                    <div class="s3-feed-row"><div class="s3-feed-emoji">💪</div><div class="s3-feed-txt">Julien R. — "Push Day" 3 200 kg</div><div class="s3-feed-time">5 h</div></div>
-                    <div class="s3-feed-row"><div class="s3-feed-emoji">🔥</div><div class="s3-feed-txt">Marie T. — 8 semaines de suite !</div><div class="s3-feed-time">1 j</div></div>
-                  </div>
-                </div>
-                <div class="sc-tabbar">
-                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Pro...</div>
-                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Séa...</div>
-                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Stats</div>
-                  <div class="sc-tab t-on"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>Social</div>
-                  <div class="sc-tab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/></svg>Régl...</div>
-                </div>
-              </div>
-
-            </div>
+        <div class="feat r d1">
+          <div class="feat-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
           </div>
-          <!-- Dots -->
-          <div class="sc-dots">
-            <div class="sc-dot active" data-idx="0"></div>
-            <div class="sc-dot" data-idx="1"></div>
-            <div class="sc-dot" data-idx="2"></div>
+          <div class="feat-title">Tes stats, en un coup d'œil</div>
+          <p class="feat-desc">Volume total, séances, records personnels. Tout est mesuré, tracé, affiché. Tu vois exactement où tu en es — semaine après semaine.</p>
+        </div>
+
+        <div class="feat r d2">
+          <div class="feat-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
+          <div class="feat-title">Challenge tes amis</div>
+          <p class="feat-desc">Rejoins la communauté ATHion, compare ton volume avec tes amis et reste en tête du classement. La salle, c'est mieux à plusieurs.</p>
         </div>
 
       </div>
@@ -836,19 +763,12 @@
     /* ── App Showcase Carousel ── */
     (function(){
       var INTERVAL = 4200; // ms per screen
-      var TICK     = 50;   // progress bar update freq
-      var N        = 3;
-      var cur      = 0;
-      var autoTimer, progTimer, progVal = 0;
+      var N   = 3;
+      var cur = 0;
+      var autoTimer;
 
-      var track  = document.getElementById('sc-track');
-      var dots   = document.querySelectorAll('.sc-dot');
-      var sfItems= document.querySelectorAll('.sf');
-      var bars   = [
-        document.getElementById('sfbar0'),
-        document.getElementById('sfbar1'),
-        document.getElementById('sfbar2')
-      ];
+      var track = document.getElementById('sc-track');
+      var dots  = document.querySelectorAll('.sc-dot');
 
       if (!track) return;
 
@@ -856,17 +776,6 @@
         cur = idx;
         track.style.transform = 'translateX(-' + (idx * 280) + 'px)';
         dots.forEach(function(d,i){ d.classList.toggle('active', i===idx); });
-        sfItems.forEach(function(f,i){ f.classList.toggle('active', i===idx); });
-        /* reset all bars */
-        bars.forEach(function(b){ if(b) b.style.width='0%'; });
-        /* animate active bar */
-        clearInterval(progTimer);
-        progVal = 0;
-        var step = 100 / (INTERVAL / TICK);
-        progTimer = setInterval(function(){
-          progVal = Math.min(progVal + step, 100);
-          if(bars[cur]) bars[cur].style.width = progVal + '%';
-        }, TICK);
       }
 
       function next(){ goTo((cur + 1) % N); }
@@ -875,15 +784,6 @@
         clearInterval(autoTimer);
         autoTimer = setInterval(next, INTERVAL);
       }
-
-      /* Click on feature tab */
-      sfItems.forEach(function(f,i){
-        f.addEventListener('click', function(){
-          clearInterval(autoTimer);
-          goTo(i);
-          startAuto();
-        });
-      });
 
       /* Click on dot */
       dots.forEach(function(d,i){
@@ -897,29 +797,12 @@
       /* Pause on phone hover */
       var phone = document.getElementById('sc-phone');
       if(phone){
-        phone.addEventListener('mouseenter', function(){
-          clearInterval(autoTimer);
-          clearInterval(progTimer);
-        });
-        phone.addEventListener('mouseleave', function(){
-          startAuto();
-        });
-      }
-
-      /* Pause when section not visible (perf) */
-      var showcase = document.querySelector('#features .showcase-inner');
-      if(showcase && window.IntersectionObserver){
-        new IntersectionObserver(function(entries){
-          entries.forEach(function(e){
-            if(e.isIntersecting){ startAuto(); }
-            else { clearInterval(autoTimer); clearInterval(progTimer); }
-          });
-        },{threshold:0.2}).observe(showcase);
-      } else {
-        startAuto();
+        phone.addEventListener('mouseenter', function(){ clearInterval(autoTimer); });
+        phone.addEventListener('mouseleave', function(){ startAuto(); });
       }
 
       goTo(0);
+      startAuto();
     })();
   </script>
 </body>
