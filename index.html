@@ -144,9 +144,9 @@
     .sc-phone { width:280px; height:580px; background:#0A0A0A; border-radius:44px; border:1.5px solid rgba(255,255,255,.1); box-shadow:0 36px 90px rgba(0,0,0,.85), 0 0 0 1px rgba(255,255,255,.04), inset 0 1px 0 rgba(255,255,255,.07); position:relative; overflow:hidden; animation:breathe 6s ease-in-out infinite; flex-shrink:0; }
     @keyframes breathe { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
     .sc-island { position:absolute; top:12px; left:50%; transform:translateX(-50%); width:88px; height:18px; background:#000; border-radius:999px; z-index:20; }
-    .sc-btn-r { position:absolute; right:-2px; top:120px; width:2px; height:64px; background:rgba(255,255,255,.12); border-radius:0 2px 2px 0; z-index:20; }
-    .sc-btn-l1 { position:absolute; left:-2px; top:100px; width:2px; height:26px; background:rgba(255,255,255,.12); border-radius:2px 0 0 2px; z-index:20; }
-    .sc-btn-l2 { position:absolute; left:-2px; top:138px; width:2px; height:46px; background:rgba(255,255,255,.12); border-radius:2px 0 0 2px; z-index:20; }
+    .sc-btn-r { position:absolute; right:0; top:120px; width:3px; height:64px; background:rgba(255,255,255,.18); border-radius:0 2px 2px 0; z-index:20; }
+    .sc-btn-l1 { position:absolute; left:0; top:100px; width:3px; height:26px; background:rgba(255,255,255,.18); border-radius:2px 0 0 2px; z-index:20; }
+    .sc-btn-l2 { position:absolute; left:0; top:138px; width:3px; height:46px; background:rgba(255,255,255,.18); border-radius:2px 0 0 2px; z-index:20; }
 
     /* ─── Stats ─────────────────────────────────────────────────── */
     .stats { padding:0 0 80px; }
@@ -285,6 +285,7 @@
     .s1-vol-lbl { font-size:7.5px; font-weight:700; color:#9CA3AF; letter-spacing:1px; text-transform:uppercase; margin-bottom:2px; }
     .s1-vol-val { font-size:16px; font-weight:800; color:#111827; letter-spacing:-.5px; }
     .s1-badge-r { display:inline-flex; align-items:center; font-size:8px; font-weight:600; color:#EF4444; background:#FEE2E2; padding:2px 6px; border-radius:999px; margin:2px 0; }
+    .s1-badge-g { display:inline-flex; align-items:center; font-size:8px; font-weight:600; color:#10B981; background:#D1FAE5; padding:2px 6px; border-radius:999px; margin:2px 0; }
     .s1-encore { font-size:8.5px; color:#6B7280; }
     .s1-search { background:#fff; border-radius:10px; padding:7px 11px; display:flex; align-items:center; gap:7px; font-size:10px; color:#9CA3AF; box-shadow:0 1px 3px rgba(0,0,0,.05); }
     .s1-chips { display:flex; gap:5px; flex-wrap:nowrap; overflow:hidden; }
@@ -330,6 +331,7 @@
     .s2-card-val { font-size:16px; font-weight:800; color:#111827; letter-spacing:-.5px; margin-bottom:1px; }
     .s2-card-lbl { font-size:7px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#9CA3AF; margin-bottom:4px; }
     .s2-badge { display:inline-flex; align-items:center; font-size:7.5px; font-weight:600; color:#EF4444; background:#FEE2E2; padding:2px 5px; border-radius:999px; }
+    .s2-badge-g { display:inline-flex; align-items:center; font-size:7.5px; font-weight:600; color:#10B981; background:#D1FAE5; padding:2px 5px; border-radius:999px; }
 
     /* ── Screen 3 specific ── */
     .s3-hdr { display:flex; align-items:center; gap:7px; }
@@ -383,7 +385,7 @@
     <a href="#features">Fonctionnalités</a>
     <a href="#how">Comment ça marche</a>
     <a href="#pricing">Tarifs</a>
-    <a href="#download" class="ov-cta">Télécharger gratis</a>
+    <a href="#download" class="ov-cta">Télécharger</a>
   </div>
 
   <!-- Hero -->
@@ -431,14 +433,14 @@
                   <div class="s1-titlerow"><div class="s1-title">RMK</div><div class="s1-circle"></div></div>
                   <div class="s1-vol">
                     <div class="s1-donut">
-                      <svg width="52" height="52" viewBox="0 0 52 52"><circle cx="26" cy="26" r="20" fill="none" stroke="#EDE9FE" stroke-width="5"/><circle cx="26" cy="26" r="20" fill="none" stroke="#7C3AED" stroke-width="5" stroke-dasharray="0 126" stroke-linecap="round" transform="rotate(-90 26 26)"/></svg>
-                      <div class="s1-donut-lbl">0/3<br>séances</div>
+                      <svg width="52" height="52" viewBox="0 0 52 52"><circle cx="26" cy="26" r="20" fill="none" stroke="#EDE9FE" stroke-width="5"/><circle cx="26" cy="26" r="20" fill="none" stroke="#7C3AED" stroke-width="5" stroke-dasharray="126 0" stroke-linecap="round" transform="rotate(-90 26 26)"/></svg>
+                      <div class="s1-donut-lbl">3/3<br>séances</div>
                     </div>
                     <div class="s1-vol-inf">
                       <div class="s1-vol-lbl">Volume semaine</div>
-                      <div class="s1-vol-val">0 kg</div>
-                      <div class="s1-badge-r">↘ -1 séances</div>
-                      <div class="s1-encore">Encore 3 séances</div>
+                      <div class="s1-vol-val">8 240 kg</div>
+                      <div class="s1-badge-g">↗ +8 %</div>
+                      <div class="s1-encore">Semaine complète !</div>
                     </div>
                   </div>
                   <div class="s1-search"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Rechercher programme...</div>
@@ -467,17 +469,17 @@
                 <div class="sc-body">
                   <div class="s2-hdr"><div><div class="s2-title">Ta progression</div><div class="s2-sub">Séances · Volume · Records</div></div><div class="s2-bell"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div></div>
                   <div class="s2-filter"><span class="s2-fc fa">7j</span><span class="s2-fc">30j</span><span class="s2-fc">3m</span><span class="s2-fc">1an</span></div>
-                  <div class="s2-week"><div><div class="s2-wk-lbl">Ta semaine</div><div class="s2-wk-date">20 avr. – 26 avr.</div><div class="s2-wk-msg">Semaine difficile ? La prochaine sera meilleure</div></div><div class="s2-wk-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="#F59E0B"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div></div>
+                  <div class="s2-week"><div><div class="s2-wk-lbl">Ta semaine</div><div class="s2-wk-date">20 avr. – 26 avr.</div><div class="s2-wk-msg">Excellente semaine, 3 records battus !</div></div><div class="s2-wk-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="#10B981"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div></div>
                   <div class="s2-stats-row">
-                    <div class="s2-sc"><div class="s2-sc-icon" style="background:#EDE9FE"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"><path d="M6.5 6.5h11M6.5 17.5h11M4 12h16"/></svg></div><div class="s2-sc-val">0/3</div><div class="s2-sc-lbl">Séances</div></div>
-                    <div class="s2-sc"><div class="s2-sc-icon" style="background:#FEF3C7"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></div><div class="s2-sc-val">0 kg</div><div class="s2-sc-lbl">Volume</div></div>
-                    <div class="s2-sc"><div class="s2-sc-icon" style="background:#FEF3C7"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div><div class="s2-sc-val">—</div><div class="s2-sc-lbl">PR</div></div>
+                    <div class="s2-sc"><div class="s2-sc-icon" style="background:#EDE9FE"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"><path d="M6.5 6.5h11M6.5 17.5h11M4 12h16"/></svg></div><div class="s2-sc-val">3/3</div><div class="s2-sc-lbl">Séances</div></div>
+                    <div class="s2-sc"><div class="s2-sc-icon" style="background:#FEF3C7"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></div><div class="s2-sc-val">8 240 kg</div><div class="s2-sc-lbl">Volume</div></div>
+                    <div class="s2-sc"><div class="s2-sc-icon" style="background:#DCFCE7"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div><div class="s2-sc-val">92,5 kg</div><div class="s2-sc-lbl">PR</div></div>
                   </div>
                   <div class="s2-grid">
-                    <div class="s2-card"><div class="s2-card-icon" style="background:#EDE9FE"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"><path d="M6.5 6.5h11M6.5 17.5h11M4 12h16"/></svg></div><div class="s2-card-val">0</div><div class="s2-card-lbl">Séances</div><div class="s2-badge">↘ -1</div></div>
-                    <div class="s2-card"><div class="s2-card-icon" style="background:#FEF3C7"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></div><div class="s2-card-val">0 kg</div><div class="s2-card-lbl">Volume</div><div class="s2-badge">↘ -6960 kg</div></div>
-                    <div class="s2-card"><div class="s2-card-icon" style="background:#FEF3C7"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div><div class="s2-card-val">—</div><div class="s2-card-lbl">Meilleur PR</div></div>
-                    <div class="s2-card"><div class="s2-card-icon" style="background:#DCFCE7"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="s2-card-val">—</div><div class="s2-card-lbl">Durée moy.</div><div class="s2-badge">↘ -1min</div></div>
+                    <div class="s2-card"><div class="s2-card-icon" style="background:#EDE9FE"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"><path d="M6.5 6.5h11M6.5 17.5h11M4 12h16"/></svg></div><div class="s2-card-val">3</div><div class="s2-card-lbl">Séances</div><div class="s2-badge-g">↗ +2</div></div>
+                    <div class="s2-card"><div class="s2-card-icon" style="background:#FEF3C7"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></div><div class="s2-card-val">8 240 kg</div><div class="s2-card-lbl">Volume</div><div class="s2-badge-g">↗ +640 kg</div></div>
+                    <div class="s2-card"><div class="s2-card-icon" style="background:#DCFCE7"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div><div class="s2-card-val">92,5 kg</div><div class="s2-card-lbl">Meilleur PR</div></div>
+                    <div class="s2-card"><div class="s2-card-icon" style="background:#DCFCE7"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="s2-card-val">52 min</div><div class="s2-card-lbl">Durée moy.</div><div class="s2-badge-g">↗ +3 min</div></div>
                   </div>
                 </div>
                 <div class="sc-tabbar">
@@ -534,13 +536,8 @@
     <div class="container">
       <div class="trust-inner r">
         <div class="trust-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <span><strong>4.8</strong> / 5 · App Store</span>
-        </div>
-        <div class="trust-sep"></div>
-        <div class="trust-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          <span>Des centaines d'athlètes progressent</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span>Actuellement en <strong>bêta ouverte</strong></span>
         </div>
         <div class="trust-sep"></div>
         <div class="trust-item">
@@ -560,7 +557,7 @@
   <div class="stats">
     <div class="container">
       <div class="stats-grid">
-        <div class="stat r"><div class="stat-n" data-target="100" data-suffix="%">100%</div><div class="stat-l">Performances mémorisées automatiquement</div></div>
+        <div class="stat r"><div class="stat-n" data-target="100" data-suffix="%">0%</div><div class="stat-l">Performances mémorisées automatiquement</div></div>
         <div class="stat r d1"><div class="stat-n">∞</div><div class="stat-l">Exercices enregistrables, sans limite</div></div>
         <div class="stat r d2"><div class="stat-n" data-target="0">0</div><div class="stat-l">Excuses pour stagner</div></div>
       </div>
@@ -611,30 +608,6 @@
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="section" style="background:rgba(255,255,255,.018);border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05)" id="reviews">
-    <div class="container">
-      <div class="sec-tag">Ils progressent avec ATHion</div>
-      <h2 class="sec-title r">Ce qu'ils en <span class="g">pensent vraiment.</span></h2>
-      <div class="testi-grid">
-        <div class="testi-card r">
-          <div class="testi-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-          <p class="testi-quote">"Avant ATHion, je notais mes poids sur un carnet que je perdais constamment. Maintenant je bats mon record de développé couché presque à chaque séance."</p>
-          <div class="testi-author"><div class="testi-av">ML</div><div><div class="testi-name">Marie L.</div><div class="testi-role">Crossfit 3× / semaine · Paris</div></div></div>
-        </div>
-        <div class="testi-card r d1">
-          <div class="testi-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-          <p class="testi-quote">"Le programme IA m'a bluffé : adapté à mes objectifs, mes dispo, mon niveau. 5 ans de salle et je n'avais jamais eu un programme aussi bien calibré."</p>
-          <div class="testi-author"><div class="testi-av">JM</div><div><div class="testi-name">Julien M.</div><div class="testi-role">Musculation · Lyon</div></div></div>
-        </div>
-        <div class="testi-card r d2">
-          <div class="testi-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-          <p class="testi-quote">"En 2 minutes j'avais mon premier programme. Je vois ma progression semaine après semaine, c'est hyper motivant de voir les chiffres monter."</p>
-          <div class="testi-author"><div class="testi-av">SK</div><div><div class="testi-name">Sarah K.</div><div class="testi-role">Débutante · Bordeaux</div></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- How it works -->
   <section class="section hiw" id="how">
@@ -734,10 +707,11 @@
 
     /* ── App Showcase Carousel ── */
     (function(){
-      var INTERVAL = 4200; // ms per screen
+      var INTERVAL = 4200;
       var N   = 3;
       var cur = 0;
       var autoTimer;
+      var RM  = window.matchMedia('(prefers-reduced-motion: reduce)');
 
       var track = document.getElementById('sc-track');
       var dots  = document.querySelectorAll('.sc-dot');
@@ -753,6 +727,7 @@
       function next(){ goTo((cur + 1) % N); }
 
       function startAuto(){
+        if (RM.matches) return; /* respecte prefers-reduced-motion */
         clearInterval(autoTimer);
         autoTimer = setInterval(next, INTERVAL);
       }
@@ -766,16 +741,23 @@
         });
       });
 
-      /* Pause on phone hover */
+      /* Pause on hover (desktop) + touch (mobile) */
       var phone = document.getElementById('sc-phone');
       if(phone){
         phone.addEventListener('mouseenter', function(){ clearInterval(autoTimer); });
         phone.addEventListener('mouseleave', function(){ startAuto(); });
+        phone.addEventListener('touchstart', function(){ clearInterval(autoTimer); }, {passive:true});
+        phone.addEventListener('touchend',   function(){ startAuto(); }, {passive:true});
       }
 
       goTo(0);
       startAuto();
     })();
+
+    /* ── Escape closes mobile overlay ── */
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && overlay.classList.contains('open')) burger.click();
+    });
   </script>
 </body>
 </html>
